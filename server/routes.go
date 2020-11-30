@@ -6,6 +6,7 @@ import (
 
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
+	"github.com/omarsagoo/legitWiki/handlers"
 )
 
 // TemplateRenderer is a custom html/template renderer for Echo framework
@@ -30,10 +31,16 @@ func (s Server) Routes() {
 	s.e.Use(middleware.Logger())
 	s.e.Use(middleware.Recover())
 
+	renderer := &TemplateRenderer{
+		templates: template.Must(template.ParseGlob("templates/*.html")),
+	}
+	// render
+	s.e.Renderer = renderer
+
 	// public files
 	s.e.Static("/", "public")
 
-	s.e.GET("/", func(c echo.Context) error {
-		return nil
-	})
+	s.e.GET("/", handlers.IndexHandler)
+	s.e.GET("/top", handlers.TopArticlesHandler)
+
 }
