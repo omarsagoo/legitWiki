@@ -33,4 +33,7 @@ func (s Server) Routes() {
 	// public files
 	s.e.Static("/", "public")
 
+	s.e.GET("/", func(c echo.Context) error {
+		return nil
+	})
 }
