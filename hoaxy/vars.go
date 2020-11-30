@@ -16,3 +16,11 @@ type Article struct {
 	Type   string    `json:"site_type"`
 	Title  string    `json:"title"`
 }
+
+// Tweets holds a list of all the tweets and other data
+type Tweets struct {
+}
+
+// Tweet holds information about an individual tweet
+type Tweet struct {
+}
