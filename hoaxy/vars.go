@@ -1,6 +1,8 @@
 package hoaxy
 
-import "time"
+import (
+	"time"
+)
 
 // Articles holds a list of Articles from the API
 type Articles struct {
@@ -19,8 +21,17 @@ type Article struct {
 
 // Tweets holds a list of all the tweets and other data
 type Tweets struct {
+	Tweets []Tweet
 }
 
 // Tweet holds information about an individual tweet
 type Tweet struct {
+	URL       string    `json:"canonical_url"`
+	Published time.Time `json:"date_published"`
+	Created   time.Time `json:"tweet_created_at"`
+	TweetID   int       `json:"tweet_id"`
+	Type      string    `json:"site_type"`
+	Title     string    `json:"title"`
+	Domain    string    `json:"domain"`
+	ID        int       `json:"id"`
 }

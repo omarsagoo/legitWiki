@@ -1,10 +1,15 @@
 package server
 
-import "github.com/labstack/echo"
+import (
+	"github.com/dghubble/go-twitter/twitter"
+	"github.com/labstack/echo"
+	"github.com/omarsagoo/legitWiki/config"
+)
 
 // Server is a wrapper around our core
 type Server struct {
 	e *echo.Echo
+	t *twitter.Client
 }
 
 //New will create a new instance of the server.
@@ -12,6 +17,7 @@ func New() *Server {
 
 	return &Server{
 		e: echo.New(), // new echo server to server the api
+		t: config.GetTwitterClient(),
 	}
 }
 

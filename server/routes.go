@@ -27,6 +27,9 @@ func (t *TemplateRenderer) Render(w io.Writer, name string, data interface{}, c 
 
 // Routes renders all the routes for the server
 func (s Server) Routes() {
+	h := handlers.Handler{}
+	h.TwitterClient = s.t
+
 	// Logging and recovery
 	s.e.Use(middleware.Logger())
 	s.e.Use(middleware.Recover())
@@ -42,5 +45,6 @@ func (s Server) Routes() {
 
 	s.e.GET("/", handlers.IndexHandler)
 	s.e.GET("/top", handlers.TopArticlesHandler)
+	s.e.GET("/tweet", h.GetTweet)
 
 }

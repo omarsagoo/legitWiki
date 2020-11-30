@@ -1,9 +1,23 @@
+# github.com/cenkalti/backoff v2.1.1+incompatible
+github.com/cenkalti/backoff
+# github.com/dghubble/go-twitter v0.0.0-20201011215211-4b180d0cc78d
+## explicit
+github.com/dghubble/go-twitter/twitter
+# github.com/dghubble/oauth1 v0.6.0
+## explicit
+github.com/dghubble/oauth1
+# github.com/dghubble/sling v1.3.0
+github.com/dghubble/sling
 # github.com/dgrijalva/jwt-go v3.2.0+incompatible
 ## explicit
 github.com/dgrijalva/jwt-go
+# github.com/google/go-querystring v1.0.0
+github.com/google/go-querystring/query
 # github.com/joho/godotenv v1.3.0
 ## explicit
 github.com/joho/godotenv
+# github.com/kr/pretty v0.1.0
+## explicit
 # github.com/labstack/echo v3.3.10+incompatible
 ## explicit
 github.com/labstack/echo
@@ -28,12 +42,18 @@ github.com/valyala/fasttemplate
 ## explicit
 golang.org/x/crypto/acme
 golang.org/x/crypto/acme/autocert
-# golang.org/x/net v0.0.0-20190404232315-eb5bcb51f2a3
+# golang.org/x/net v0.0.0-20200822124328-c89045814202
+## explicit
 golang.org/x/net/idna
-# golang.org/x/sys v0.0.0-20191026070338-33540a1f6037
+# golang.org/x/sys v0.0.0-20200803210538-64077c9b5642
+## explicit
+golang.org/x/sys/internal/unsafeheader
 golang.org/x/sys/unix
-# golang.org/x/text v0.3.0
+# golang.org/x/text v0.3.3
+## explicit
 golang.org/x/text/secure/bidirule
 golang.org/x/text/transform
 golang.org/x/text/unicode/bidi
 golang.org/x/text/unicode/norm
+# gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127
+## explicit
