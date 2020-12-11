@@ -16,8 +16,5 @@ COPY . /go/src/${APP_NAME}
 # Install dependecies from mod file
 RUN go mod download
 
-# Hot reloading for development!
-RUN go get github.com/githubnemo/CompileDaemon
-
-# Compile the binary to run the program
+# Compile the binary to run the progra
 ENTRYPOINT CompileDaemon --build="go build -o totally-legit-wiki" --command=./totally-legit-wiki
