@@ -9,9 +9,11 @@ ENV APP_NAME totally-legit-wiki
 # EXPOSE ${PORT}
 
 # Working directory
-WORKDIR /go/src/${APP_NAME}
 
 COPY . /go/src/${APP_NAME}
+
+WORKDIR /go/src/${APP_NAME}
+
 
 # Install dependecies from mod file
 RUN go mod download
@@ -22,4 +24,4 @@ RUN go mod download
 # Compile the binary to run the pro
 # ENTRYPOINT CompileDaemon --build="go build -o totally-legit-wiki" --command=./totally-legit-wiki
 
-RUN go run main.go
+CMD [ "go", "run", "main.go" ]
