@@ -22,4 +22,4 @@ RUN go mod download
 # Compile the binary to run the pro
 # ENTRYPOINT CompileDaemon --build="go build -o totally-legit-wiki" --command=./totally-legit-wiki
 
-RUN go build && go install && legitWiki
+RUN go run main.go
