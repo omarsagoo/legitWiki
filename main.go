@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"os"
 
 	"github.com/joho/godotenv"
 	"github.com/omarsagoo/legitWiki/server"
@@ -14,5 +15,5 @@ func main() {
 	}
 
 	s := server.New()
-	s.Start(":8080")
+	s.Start(os.Getenv("PORT"))
 }
