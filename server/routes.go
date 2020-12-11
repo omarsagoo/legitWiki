@@ -46,5 +46,6 @@ func (s Server) Routes() {
 	s.e.GET("/", handlers.IndexHandler)
 	s.e.GET("/top", handlers.TopArticlesHandler)
 	s.e.GET("/tweet", h.GetTweet)
-
+	s.e.GET("/searched", handlers.SearchArticlesHandler)
+	s.e.GET("/tweet/:id", h.GetTweet)
 }

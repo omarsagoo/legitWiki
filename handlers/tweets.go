@@ -7,6 +7,7 @@ import (
 
 // GetTweet does
 func (h Handler) GetTweet(c echo.Context) error {
-	hoaxy.GetTweets(h.TwitterClient)
-	return nil
+	ID := c.Param("id")
+	tweet := hoaxy.GetTweetsFromArticle(h.TwitterClient, ID)
+	return c.JSON(200, tweet)
 }

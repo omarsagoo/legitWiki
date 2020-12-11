@@ -5,7 +5,6 @@ FROM golang:alpine3.12
 ENV APP_NAME totally-legit-wiki
 ENV PORT 8080
 
-
 # Open system port
 EXPOSE ${PORT}
 
@@ -20,4 +19,5 @@ RUN go mod download
 # Hot reloading for development!
 RUN go get github.com/githubnemo/CompileDaemon
 
+# Compile the binary to run the program
 ENTRYPOINT CompileDaemon --build="go build -o totally-legit-wiki" --command=./totally-legit-wiki
