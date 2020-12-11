@@ -13,5 +13,5 @@ func main() {
 	// }
 
 	s := server.New()
-	s.Start(os.Getenv("PORT"))
+	s.Start(":" + os.Getenv("PORT"))
 }
