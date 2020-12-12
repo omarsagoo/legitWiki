@@ -12,12 +12,13 @@ type Articles struct {
 
 // Article holds an Article from the API
 type Article struct {
-	URL    string    `json:"canonical_url"`
-	Date   time.Time `json:"date_published"`
-	Tweets int       `json:"number_of_tweets"`
-	Type   string    `json:"site_type"`
-	Title  string    `json:"title"`
-	ID     int       `json:"id"`
+	URL         string    `json:"canonical_url"`
+	Date        time.Time `json:"date_published"`
+	Tweets      int       `json:"number_of_tweets"`
+	Type        string    `json:"site_type"`
+	Title       string    `json:"title"`
+	ID          int       `json:"id"`
+	CaptureDate time.Time `json:"date_captured"`
 }
 
 // Tweets holds a list of all the tweets and other data
